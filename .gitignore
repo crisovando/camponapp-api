@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+.idea
+package-lock.json
+yarn.lock
+yarn-error.log
+bong-api/*
+data/tmp/*
+!data/tmp/.gitkeep
+docs
+dump.rdb

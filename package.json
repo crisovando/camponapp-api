@@ -1,0 +1,31 @@
+{
+  "name": "findind-pet-api",
+  "version": "1.0.0",
+  "description": "Appfor find missed pet",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start.js",
+    "startmon": "nodemon --exec babel-node index.js",
+    "now-dev": "node start.js $PORT",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "apollo-server": "^2.3.1",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.3",
+    "pg": "^7.10.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^5.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "nodemon": "^1.18.10"
+  },
+  "author": "MENF-Tech",
+  "license": "ISC"
+}

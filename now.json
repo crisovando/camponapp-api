@@ -1,0 +1,14 @@
+{
+  "name": "finding-pet",
+  "version": 2,
+  "builds": [{ "src": "index.js", "use": "@now/node-server" }],
+  "routes": [{ "src": "/.*", "dest": "index.js" }],
+  "build": {
+    "env": {
+      "HOST_DB": "@host-db",
+      "USER_DB": "@user-db",
+      "NAME_DB": "@name-db",
+      "PASS_DB": "@pass-db"
+    }
+  }
+}
