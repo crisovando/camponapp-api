@@ -1,5 +1,5 @@
 export default `
   type Query {
-    users: [User]
+    posts: [Post]
   }
 `;

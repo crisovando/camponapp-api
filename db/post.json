@@ -1,0 +1,16 @@
+[
+  {
+    "post_id": 1,
+    "titulo": "Perro Bulldog en sallares",
+    "lat": -34.8067,
+    "long": -58.2739,
+    "foto": "/assets/img/perrito1.jpg"
+  },
+  {
+    "post_id": 2,
+    "titulo": "Caniche en san juan",
+    "lat": -34.804281,
+    "long": -58.278445,
+    "foto": "/assets/img/perrito2.jpg"
+  }
+]
