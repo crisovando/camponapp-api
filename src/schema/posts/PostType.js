@@ -1,6 +1,6 @@
 export default `
   type Post {
-    post_id: Int!
+    id: Int!
     titulo: String
     lat: Float!
     long: Float!

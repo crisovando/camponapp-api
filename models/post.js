@@ -2,20 +2,24 @@ import Sequelize from 'sequelize';
 import { dbConnector } from '../services/connectors';
 
 const Post = dbConnector.define(
-  'post',
+  'posts',
   {
-    post_id: {
+    id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
     descripcion: Sequelize.STRING,
     titulo: Sequelize.STRING,
-    fecha_creacion: Sequelize.DATE,
-    usuario_id: Sequelize.INTEGER,
+    createdAt: Sequelize.DATE,
+    updatedAt: Sequelize.DATE,
+    foto: Sequelize.STRING,
+    lat: Sequelize.BIGINT,
+    long: Sequelize.BIGINT,
+    user_id: Sequelize.INTEGER,
   },
   {
-    tableName: 'post',
+    tableName: 'posts',
   },
 );
 

@@ -9,8 +9,10 @@ const User = dbConnector.define(
       autoIncrement: true,
       primaryKey: true,
     },
+    dni: Sequelize.INTEGER,
     nombre: Sequelize.STRING,
     apellido: Sequelize.STRING,
+    password: Sequelize.STRING,
     createdAt: {
       type: Sequelize.DATE,
       field: 'createdAt',

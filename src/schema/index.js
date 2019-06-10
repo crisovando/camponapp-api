@@ -1,10 +1,9 @@
-import { makeExecutableSchema } from 'graphql-tools';
-import { merge } from 'lodash';
-import { PostQuery, PostResolver, PostType, PostMutation } from './posts';
+import { mergeSchemas } from 'graphql-tools';
+import posts from './posts';
+import user from './user';
 
-const resolvers = {};
+const schemas = [ posts, user ];
 
-export const schema = makeExecutableSchema({
-  typeDefs: [ PostType, PostQuery, PostMutation ],
-  resolvers: merge(resolvers, PostResolver),
+export default mergeSchemas({
+  schemas
 });

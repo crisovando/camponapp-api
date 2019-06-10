@@ -1,11 +1,10 @@
 
 import PostModel from '../../../models/post';
-import posts from '../../../db/post';
 
 
 export default {
   Query: {
-    posts: async () => posts,
+    posts: async () => PostModel.findAll(),
   },
   Mutation: {
     addPost: async (obj, args) => {
