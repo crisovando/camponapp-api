@@ -28,7 +28,6 @@ export default {
         'finding-pet', // secret key
         { expiresIn: '1y' }
       )
-      return res;
     },
     async login (_, { dni, password }) {
       const user = await UserModel.findOne({ where: { dni } })
