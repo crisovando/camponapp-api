@@ -4,6 +4,6 @@ export default `
     titulo: String
     lat: Float!
     long: Float!
-    foto: String
+    fotos: [String]
   }
 `;

@@ -1,4 +1,8 @@
 import Sequelize from 'sequelize';
+import dotenv from 'dotenv';
+import { v2 as cloudinaryApi} from 'cloudinary';
+
+dotenv.config();
 
 export const dbConnector = new Sequelize(
   process.env.NAME_DB || 'd5ri6uu91nfa1o',
@@ -14,3 +18,11 @@ export const dbConnector = new Sequelize(
     logging: false,
   },
 );
+
+cloudinaryApi.config({ 
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+  api_key: process.env.CLOUDINARY_API_KEY, 
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
+
+export const cloudinary = cloudinaryApi;

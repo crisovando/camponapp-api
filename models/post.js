@@ -13,7 +13,7 @@ const Post = dbConnector.define(
     titulo: Sequelize.STRING,
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE,
-    foto: Sequelize.STRING,
+    fotos: Sequelize.ARRAY(Sequelize.STRING),
     lat: Sequelize.BIGINT,
     long: Sequelize.BIGINT,
     user_id: Sequelize.INTEGER,

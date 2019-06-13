@@ -15,7 +15,7 @@ const PORT = 4000
 // create our express app
 const app = express()
 
-app.use('/graphql', bodyParser.json(), auth)
+app.use('/graphql', bodyParser.json({limit: '50mb'}), auth)
 
 const server = new ApolloServer({
   schema,
