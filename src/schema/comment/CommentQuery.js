@@ -1,6 +1,5 @@
 export default `
   extend type Query {
-    users: [User]
-    me: User
+    comments(post_id: Int!): [Comment]
   }
 `;

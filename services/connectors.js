@@ -15,7 +15,7 @@ export const dbConnector = new Sequelize(
       ssl: true,
     },
     host: process.env.HOST_DB || 'ec2-54-243-197-120.compute-1.amazonaws.com',
-    logging: false,
+    logging: true,
   },
 );
 

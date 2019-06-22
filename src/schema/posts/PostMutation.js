@@ -1,7 +1,7 @@
 export default `
 scalar Upload
 
-type Mutation {
+extend type Mutation {
   addPost(
     titulo: String!
     descripcion: String

@@ -13,6 +13,8 @@ const User = dbConnector.define(
     nombre: Sequelize.STRING,
     apellido: Sequelize.STRING,
     password: Sequelize.STRING,
+    foto: Sequelize.STRING,
+    telefono: Sequelize.BIGINT,
     createdAt: {
       type: Sequelize.DATE,
       field: 'createdAt',

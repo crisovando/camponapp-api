@@ -3,5 +3,8 @@ export default `
     dni: Int!
     nombre: String!
     apellido: String!
+    telefono: Int
+    foto: String
+    user_id: Int
   }
 `;

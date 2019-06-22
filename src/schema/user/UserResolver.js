@@ -1,7 +1,8 @@
 
-import UserModel from '../../../models/user';
+import { user as UserModel } from '../../../models';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import { cloudinary } from '../../../services/connectors';
 
 export default {
   Query: {
@@ -18,9 +19,18 @@ export default {
     }
   },
   Mutation: {
-    singup: async (_, { dni, nombre, apellido, telefono, password }) => {
+    singup: async (_, { dni, nombre, apellido, telefono, password, foto }) => {
+      const eager_options = {
+        width: 200, height: 150, crop: 'scale', format: 'jpg'
+      };
+      // File upload (example for promise api)
+      if (foto) {
+        const image = await cloudinary.uploader.upload(foto.thumbUrl,{ tags:'finding-pet', eager: eager_options}); 
+        foto = image.url;
+      }
+
       const user = await UserModel.create({
-        dni, nombre, apellido, telefono,
+        dni, nombre, apellido, telefono, foto,
         password: await bcrypt.hash(password, 10)
       });
       return jwt.sign(
@@ -44,7 +54,7 @@ export default {
 
       // return json web token
       return jwt.sign(
-        { id: user.user_id, dni: user.dni },
+        { id: user.user_id, dni: user.dni, foto: user.foto, nombre: user.nombre },
         'finding-pet', // secret key
         { expiresIn: '1d' }
       )
