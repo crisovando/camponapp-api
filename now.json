@@ -1,12 +1,6 @@
 {
-  "name": "finding-pet",
+  "name": "apiCampOnApp",
   "version": 2,
   "builds": [{ "src": "index.js", "use": "@now/node-server" }],
-  "routes": [{ "src": "/.*", "dest": "index.js" }],
-  "env": {
-    "HOST_DB": "ec2-54-243-197-120.compute-1.amazonaws.com",
-    "USER_DB": "jjsffhneybudmp",
-    "NAME_DB": "d5ri6uu91nfa1o",
-    "PASS_DB": "22ed6c9eda1ed092a20a16306feaae2b18e2d6255741a9166163c4a03c435cf6"
-  }
+  "routes": [{ "src": "/.*", "dest": "index.js" }]
 }

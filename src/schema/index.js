@@ -1,17 +1,16 @@
 import { gql, makeExecutableSchema } from 'apollo-server';
-import posts from './posts';
-import user from './user';
-import comment from './comment';
+import videos from './videos';
 
 const typeDef = gql`
+  scalar Date
+  scalar Upload
   type Query
   type Mutation
-  scalar Date
 `;
 
 export default makeExecutableSchema({
   typeDefs: [
-    typeDef, user.typeDef, posts.typeDef, comment.typeDef
+    typeDef, videos.typeDef
   ],
-  resolvers: [posts.postResolver, user.userResolver, comment.commentResolver]
+  resolvers: [videos.videoResolver]
 });

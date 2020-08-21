@@ -1,30 +1,23 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { ApolloServer } from 'apollo-server-express'
-import jwt from 'express-jwt';
+import cors from 'cors';
 import schema from './src/schema';
+import config from './config/config';
 
 const PORT = 4000
-
- // auth middleware
- const auth = jwt({
-  secret: 'finding-pet',
-  credentialsRequired: false
-})
 
 // create our express app
 const app = express()
 
-app.use('/graphql', bodyParser.json({limit: '50mb'}), auth)
+app.use(cors())
+app.use('/graphql', bodyParser.json({limit: '50mb'}))
 
 const server = new ApolloServer({
-  schema,
-  context: ({ req }) => ({
-    user: req.user
-  })
+  schema
 });
 server.applyMiddleware({ app });
 
-app.listen(PORT, () => {
+app.listen(config.server.port, () => {
   console.log(`The server is running on http://localhost:${PORT}/graphql`)
 })
