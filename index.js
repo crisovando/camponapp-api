@@ -5,8 +5,6 @@ import cors from 'cors';
 import schema from './src/schema';
 import config from './config/config';
 
-const PORT = 4000
-
 // create our express app
 const app = express()
 
@@ -19,5 +17,5 @@ const server = new ApolloServer({
 server.applyMiddleware({ app });
 
 app.listen(config.server.port, () => {
-  console.log(`The server is running on http://localhost:${PORT}/graphql`)
+  console.log(`The server is running on http://localhost:${config.server.port}/graphql`)
 })

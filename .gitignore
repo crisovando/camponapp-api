@@ -5,4 +5,4 @@ yarn-error.log
 
 .vercel
 data
-google.json
+/google.json

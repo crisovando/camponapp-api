@@ -74,7 +74,7 @@ const screenshotVideo = (createReadStream, filename, duration) => new Promise(as
     .on('end', () => resolve(`${UPLOAD_DIR}/${fileName}.png`))
     .on('error', reject)
     .takeScreenshots({
-      count: 2, timemarks: [Math.floor(duration / 2)], size: '300x210', filename: fileName
+      timemarks: [Math.floor(duration / 2)], size: '300x210', filename: fileName
     }, UPLOAD_DIR)
 });
 
@@ -85,29 +85,38 @@ export default async (arg) => {
   let localJpg;
   try {
     const metadata = await getMetadata(file.createReadStream);
-    localJpg = await screenshotVideo(file.createReadStream, fileName, metadata.duration);
+    // localJpg = await screenshotVideo(file.createReadStream, fileName, metadata.duration);
 
     const [publicUrlVideo, publicUrlImage] = await Promise.all(
-      [uploadVideo(file, fileName), uploadImage(file, fileName, localJpg)]
+      [
+        uploadVideo(file, fileName),
+        // uploadImage(file, fileName, localJpg)
+      ]
     );
     
     await db.get('videos')
       .push({
         id: fileName,
         ...publicUrlVideo,
-        ...publicUrlImage,
+        // ...publicUrlImage,
         ...metadata
       })
       .write()
 
-    return { ...publicUrlVideo, ...publicUrlImage, id };
+    return {
+      ...publicUrlVideo,
+      // ...publicUrlImage,
+      id
+    };
   } catch (error) {
     console.log(error);
-    throw err;
+    throw error;
   } finally {
-    fs.unlink(localJpg,(err) => {
-      if (err) throw err;
-      console.log('File deleted!');
-    });
+    if (localJpg) {
+      fs.unlink(localJpg, (err) => {
+        if (err) throw err;
+        console.log('File deleted!');
+      }); 
+    }
   }
 }
