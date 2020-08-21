@@ -6,8 +6,6 @@ import config from '../config/config';
 
 dotenv.config();
 
-console.log(process.env.USER_DB)
-
 const Db = lowdb(new FileSync('data/db.json'));
 Db.defaults({ videos: [] }).write();
 

@@ -4,7 +4,7 @@
   "description": "Api video manager",
   "main": "index.js",
   "scripts": {
-    "start": "node start.js",
+    "start": "node -r esm index.js",
     "startmon": "nodemon --ignore './data/' --exec babel-node index.js",
     "now-dev": "node start.js $PORT"
   },
@@ -16,6 +16,7 @@
     "apollo-server-express": "^2.6.2",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
+    "esm": "^3.2.25",
     "express-graphql": "^0.7.1",
     "ffmpeg": "0.0.4",
     "ffprobe": "^1.1.0",
