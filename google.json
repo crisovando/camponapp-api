@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "camponapp",
+  "private_key_id": "438ef1b5c300f47a08352b9afd384f3a6e61d9a7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDR1Xh8sqkR6bRm\ntYjZaqR7kd/JhzTFfoPIZGc2BZKouKAsUmS6QVr4dxu9YduKVMC+pl0LXEWr6lJo\n6Q+qcp7Lnae+7UQGMjz31m2hD6WrOPKGd9RsjzRnPkk7jLW4LKB29ulZe6PY07Vx\nx6KuEirqPdpIn9ud3e8d1YHI07jh4r9dh/Cnb1OJ0iJoPgVHZkZNeGT9tdqIndkm\n1Tfd0PPaC18X+kvCMV4FywhNrc/q+G4QphsRsKqgV5rWsRgBJ1xjbnlVw3dVN1HB\nJezrrOUDHj8SX/e9OOpWf7/T36lwNp0V4r65L4mk7XyjRCsAp9HygBpJuv/Fxl+o\n5wonfvmhAgMBAAECggEAMy/C45Blo+QByOhRyM+17hron22nFuJE3XZ4ovn7C8N1\n9znmLnVQ7rmHf8xGVNlV52wH2ISazlQr5EGuO6MYT41W5UFVzbklnEOnnJmHjVwn\n9Vt36z+HxgOws6EglxvzzPFwfQ6nKnaClY3ghlwSMfACtqKgXUNNWFbEASx8tkU7\ntBNcT7jlyA5oXxOHTLs7P+AgDrSiws63VScUbDdwB4UkuQIClk5xQUtsxjcg4TW5\nFnbTZqLwdP0StnqaxJYzEHCPlAdQBtwn/ZHajVjNIujVbnlCsyMD8TfV/gLjuqlm\nyL7V01uutoNLktPn381xR5b8HJIMEYaLt38uD5ZC/QKBgQD0NUlU5eOXW4LJNP+D\n9RXTiQCu5+X1jTKAVNSf8dCb7Q7lBtzEKM2yCGHLOZpPBz+zHK/UWS/S525tiska\n1wQhPVZJ203c83BN0zrAX4WwQfZGiK0J7g2oySBeVCo0fdhWWBDf/e2w+w9PUDaG\ndIB9rzi51PBJlsxRnpG1/vnUYwKBgQDb90aXvEYy0nC2c8Meb+G8EsPm+cMf5yOj\ncWvW4Vrcbx8HbWL39Rhq7uiOkwt+1Z7ZNu4IHlMXjSOIe1TnzNip/yQNAkiS1kj+\nz0GYIrvc9bYYzJcYdig+jdcrushfUgMLBtAt9fPo7fyyS2Qyps9qmbZ61jZjkC6S\n2gH42xePKwKBgG3+3mPmFEgliNg2De0S5FzedbdSborWqWuSSh8s3SiOc0oHeELG\nmjfZfKr77BwyiKeVgUElVtwpL90ZSRHUzWBnb0lfBUhDQk9bmDf0DpRgcZw9jatO\nVUq0JOc4A7aXBG2HxzoM9xXjT3cLCzQun319AhD5761FxgvxX3JZQZA/AoGAK+GO\nkaKblnPozF0XpbDIJY7Qyfk1dd3UfDyaOMnIKIV6eS7XOYQJlPuIJTksZ+cRw19z\n6OazyNT9K7L+4yc4aeFePcIg3DonYb3S5hi3xYK3Cwd1dQnNSX1eWXjvlCR2OvLn\nAOQ5/lPLv33OxVQFuMxlXOfy/bW7tMwM7Ko4bvUCgYEAntiDLrJXUuKhxrvZCrMg\nXX4cY+TXmMGI/axDgqtYKxQN0UuDyuTf0Vi0EJRbj5ThglxCxt+vP/fGNBN2sp9j\nIUcEs93bC9okdK8IsooL+YH78sH/vBTI7FBouWwb/sd8dESYbf6e6DnA01yi1TOe\n+AteqWd4BB+Vz4WFcEg6zTc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "apicamponapp@camponapp.iam.gserviceaccount.com",
+  "client_id": "110178722544793532446",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/apicamponapp%40camponapp.iam.gserviceaccount.com"
+}
